@@ -3,18 +3,22 @@
 
 # Create the lists 
 class_1 = ['Geoffrey Hinton', 'Andreq Ng', 'Sebastian Raschka', 'Yoshua Bengio']
-# Concatenate both the strings
 class_2 = ['Hilary Mason','Carla Gentry','Corinna Cortes']
+
+# Concatenate both the strings
 new_class = class_1 + class_2
 print(new_class)
+
 # Append the list
 new_class.append('Peter Warden')
+
 # Print updated list
 print(new_class)
 
 # Remove the element from the list
-# Print the list
 new_class.remove('Carla Gentry')
+
+# Print the list
 print(new_class)
 
 # Create the Dictionary
@@ -49,19 +53,24 @@ methematics = {
     'Peter Warden'	:75
 }
 topper = max(methematics, key = methematics.get)
-print(topper)
+
 # Given string
+print(topper)
+
 # Create variable first_name 
 first_name = topper.split()[0]
+
 # Create variable Last_name and store last two element in the list
 last_name = topper.split()[1]
+
 # Concatenate the string
 full_name = last_name +" "+ first_name
+
 # print the full_name
 print(full_name)
+
 # print the name in upper case
 certificate_name = full_name.upper()
+
 print(certificate_name)
 # Code ends here
-
-
