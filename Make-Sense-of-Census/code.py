@@ -11,8 +11,17 @@ new_record=[[50,  9,  4,  1,  0,  0, 40,  0]]
 #Reading file
 data = np.genfromtxt(path, delimiter=",", skip_header=1)
 print(data)
+
+#------------------------------------------------------------------------------------------------------
+# Step 1:
+#------------------------------------------------------------------------------------------------------
+
 census= np.concatenate((data,new_record), axis=0)
 print(census)
+
+#------------------------------------------------------------------------------------------------------
+# Step 2:
+#------------------------------------------------------------------------------------------------------
 
 #Code starts here
 age = np.array(census[:,0])
@@ -29,6 +38,12 @@ print(age_mean)
 
 age_std = np.std(age)
 print(age_std)
+
+
+
+#------------------------------------------------------------------------------------------------------
+#Step 3:
+#------------------------------------------------------------------------------------------------------
 
 race_0 = np.array(census[:,2] == 0)
 print(race_0)
@@ -68,6 +83,11 @@ elif len(race_4) < len(race_0) and len(race_4) < len(race_1) and len(race_4) < l
    minority_race = 4
    print(minority_race)
 
+   
+#------------------------------------------------------------------------------------------------------   
+# Step 4:
+#------------------------------------------------------------------------------------------------------
+
 senior_citizens = census[census[:,0]>60]
 print(senior_citizens)
 
@@ -80,11 +100,6 @@ print(senior_citizens_len)
 avg_working_hours = (working_hours_sum/senior_citizens_len)
 print(avg_working_hours)
 
-
-
-# --------------
-#Code starts here
-#import statistics
 high = census[census[:,1]>10]
 print(high)
 
